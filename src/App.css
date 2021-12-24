@@ -71,19 +71,24 @@ header a{
   width: 30%;
 }
 
-.products-link{
+.recipes-link{
   text-align: right;
   margin-left: 15%;
   color: #FFF;
   text-decoration: none;
 }
 
-.products-link:hover{
+.recipes-link:hover{
   color: #36598D;
 }
 
-.logo{
-  width: 40%;
+.logo {
+  height: 100%;
+}
+
+.logo img{
+  max-height: 70%;
+  margin-top: 10px;
 }
 
 header button{
@@ -127,6 +132,11 @@ header span{
   align-items: center;
 }
 
+.text-container{
+  max-width: 85%;
+  text-align: center;
+}
+
 .wrapper{
   width: 80%;
   margin: 0 auto;
@@ -152,6 +162,7 @@ header span{
   display: flex;
   flex-direction: column;
   width: 75%;
+  min-width: 230px;
   background: #01193B;
   border: none;
   cursor: pointer;
@@ -169,54 +180,12 @@ header span{
 }
 
 .recipe-item img{
-  width: 200px;
+  max-width: 200px;
+  height: 200px;
 }
 
 .recipe-item span{
   padding-top: 10px;
-}
-
-/* Add to cart section styling */
-.add-to-cart{
-  display: flex;
-  flex-wrap: wrap;
-  flex: 1;
-  width: 80%;
-  margin: 0 auto;
-  padding: 20px 0;
-}
-
-.add-to-cart-info{
-  display: flex;
-  flex: 1 1 30%;
-  justify-content: center;
-  gap: 5px;
-}
-
-.price{
-  flex: 1 1 50%;
-  align-self: center;
-}
-
-.quantity{
-  flex: 1 1 100%;
-  text-align: center;
-}
-
-.quantity-div button{
-  background: #1A2A43;
-  color: #FFF;
-  border-radius: 5px;
-  border-top: 1px solid #FFF;
-  border-left: 1px solid #FFF;
-}
-
-.quantity-div button:hover{
-  background: #36598D
-}
-
-.quantity-div span{
-  padding: 5px;
 }
 
 /* Pink, cart-related button styling */
@@ -254,7 +223,9 @@ header span{
 
 .modal {
   position: fixed;
-  top: 15vh;
+  top: 5vh;
+  max-height: 90vh;
+  overflow: scroll;
   left: 5%;
   width: 80%;
   background: #01193B;
@@ -299,35 +270,81 @@ header span{
   margin-left: 5px;
 }
 
-/* Product description styling */
-
-.description{
-  padding: 20px 10%;
-  background: #01193B;
-}
-
-/* Specification styling */
-.spec{
-  padding: 20px 10%;
-}
-
-.spec-info{
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.spec-info-child{
-  flex-basis: 50%;
-}
-
 /* Footer styling */
 footer{
   background: #01193B;
   color: #8497B7;
-  width: 85%;
-  padding: 20px 10%;
   margin-top: auto;
+  padding: 0px 10%;
 }
+
+.social-media-icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 0px auto;
+  width: 100%;
+}
+
+.social-ul{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 0;
+}
+
+/* styling for footer anchor tags */
+.icon {
+    height: 2.25rem;
+    width: 2.25rem;
+    font-size: 2.3125rem;
+    text-align: left;
+    margin: 0 1rem;
+    padding: 1rem 1rem;
+    color: #FFF;
+    border: 1px solid #FFF;
+    border-radius: 50%;
+}
+
+/* Font size for text under social media icon */
+#icon-font{
+  font-size: 1rem;
+  text-align: center;
+  color: #FFF;
+}
+
+footer li {
+    list-style: none;
+}
+
+.social-box {
+    text-align: center;
+}
+
+/* Footer hover styling */
+/* .icon:hover {
+  color: #8497B7;
+  border: 1px solid #8497B7;
+  transition: .5s;
+} */
+
+.social-box:hover{
+  cursor: pointer;
+}
+
+.social-box:hover .icon {
+    color: #8497B7;
+    border: 1px solid #8497B7;
+    transition: .5s;
+}
+
+.social-box:hover #icon-font {
+  color: #8497B7;
+  transition: .5s;
+}
+
+
 
 /* larger screens */
 @media (min-width: 700px) {
@@ -339,37 +356,13 @@ footer{
 
 /* small-medium screens */
 @media (max-width: 700px) {
-  header{
-    width: 95%
-  }
 
-  .products-link{
-    margin-left: 0;
-    white-space: nowrap;
-    font-size: 12px;
-  }
-
-  .item-info{
-    flex-direction: column;
-  }
-
-  .item-text{
-    order: 1;
-  }
-
-  .item-info img{
-    width: 300px;
-    order: 0;
-    align-self: center;
-  }
-
-  .add-to-cart-info{
-    flex-wrap: wrap;
-    gap: 10px;
-  }
-  
   .close-button{
     height: auto;
+  }
+
+  .recipe-list {
+    grid-template-columns: 1fr;
   }
 
   footer{
@@ -379,19 +372,25 @@ footer{
 
 /* very small screens */
 @media (max-width: 400px) {
-  header button{
-    height: 65%;
-    width: 60px;
+
+  .text-container{
+    font-size: 14px;
   }
 
-  .item-info img{
-    width: 200px;
+  .recipe-item button {
+    width: 100%;
   }
 
-  .quantity{
-    display: flex;
-    align-items: center;
-    gap: 10px;
+  .social-box{
+    width: 25%;
+  }
+
+  .icon{
+    margin: 0;
+  }
+
+  footer {
+    width: 85%;
   }
 }
 

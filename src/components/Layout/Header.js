@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import logo from '../../logo.svg';
+import logo from '../../logo.png';
 
 import '../../App.css';
 
@@ -10,11 +10,11 @@ const Header = (props) => {
 
   return (
     <header>
-      <NavLink to='/'>
+      <NavLink to='/' className="logo">
         <img src={logo} alt="logo" className="logo"/>
       </NavLink>
 
-      <NavLink to='/recipes' className='products-link'>
+      <NavLink to='/recipes' className='recipes-link'>
         Recipes
       </NavLink>
     </header>

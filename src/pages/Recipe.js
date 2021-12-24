@@ -2,9 +2,10 @@
 
 import React, { useState } from "react";
 import { Fragment } from "react/cjs/react.production.min";
-import PrawnCurryListItem from "../components/RecipeListItems/PrawnCurryListItem";
-import SalmonAndPotatoesListItem from "../components/RecipeListItems/SalmonAndPotatoesListItem";
-import TeriyakiSalmonListItem from "../components/RecipeListItems/TeriyakiSalmonListItem";
+import CreamySalmonPasta from "../components/RecipeListItems/CreamySalmonPasta";
+import PrawnCurry from "../components/RecipeListItems/PrawnCurry";
+import SalmonAndPotatoes from "../components/RecipeListItems/SalmonAndPotatoes";
+import TeriyakiSalmon from "../components/RecipeListItems/TeriyakiSalmon";
 import RecipeModal from "../components/RecipeModals/RecipeModal";
 
 const Recipe = () => {
@@ -36,22 +37,16 @@ const Recipe = () => {
     
       <section className="wrapper">
         <h1>Recipes!</h1>
-        <p>Add all ingredients, step by steps, est time to cook, and my own local pics!</p>
+        <p>All recipes assume access to salt, pepper, cooking/olive oil and butter! :)</p>
         <div className="recipe-wrapper">
           <ul className="recipe-list">
-            <TeriyakiSalmonListItem onShowRecipe={showRecipeHandler} currentRecipe={recipeHandler} />
+            <TeriyakiSalmon onShowRecipe={showRecipeHandler} currentRecipe={recipeHandler} />
             
-            <PrawnCurryListItem onShowRecipe={showRecipeHandler} currentRecipe={recipeHandler} />
+            <PrawnCurry onShowRecipe={showRecipeHandler} currentRecipe={recipeHandler} />
             
-            <SalmonAndPotatoesListItem onShowRecipe={showRecipeHandler} currentRecipe={recipeHandler} />
-            
-            <li className="recipe-item">
-              <button>
-                <img src=""/>
-                <span>Salmon pasta</span>
-              </button>
-            </li>
-            
+            <SalmonAndPotatoes onShowRecipe={showRecipeHandler} currentRecipe={recipeHandler} />
+
+            <CreamySalmonPasta onShowRecipe={showRecipeHandler} currentRecipe={recipeHandler} /> 
           </ul>
         </div>
       </section>
