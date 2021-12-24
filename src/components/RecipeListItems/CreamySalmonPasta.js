@@ -4,7 +4,7 @@ import { Fragment } from "react";
 
 const CreamySalmonPasta = (props) => {
   // array of ingredients
-  const ingredients = ['salmon', 'lemon', 'rosemary', 'thyme', 'pasta', 'garlic', 'double cream', 'spinach '];
+  const ingredients = ['salmon', 'lemon', 'rosemary', 'thyme', 'pasta', 'garlic', 'double cream', 'spinach'];
 
   // recipe step by step method
   const stepByStep = 
@@ -12,7 +12,7 @@ const CreamySalmonPasta = (props) => {
     <h2> Creamy Salmon Pasta </h2>
     <p>Ingredients: 
       {ingredients.map(ingredient => {
-        if (ingredients.at(-1) === ingredient) {
+        if (ingredients[ingredients.length - 1] === ingredient) {
           return ` ${ingredient}.`;
         } else {
           return ` ${ingredient},`;

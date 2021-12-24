@@ -13,10 +13,10 @@ const PrawnCurry = (props) => {
   // recipe step by step method
   const stepByStep = 
   <Fragment>
-    <h2> Prawn Curry </h2>
+    <h2> Mama Mei's Prawn Curry </h2>
     <p>Ingredients: 
       {ingredients.map(ingredient => {
-        if (ingredients.at(-1) === ingredient) {
+        if (ingredients[ingredients.length - 1] === ingredient) {
           return ` ${ingredient}.`;
         } else {
           return ` ${ingredient},`;
@@ -48,7 +48,7 @@ const PrawnCurry = (props) => {
     <li className="recipe-item">
       <button onClick={recipeButtonHandler}>
         <img src="https://static.toiimg.com/thumb/84012482.cms?imgsize=471377&width=800&height=800" alt="Prawn Curry"/>
-        <span>Prawn Curry</span>
+        <span>Mama Mei's Prawn Curry</span>
       </button>
     </li>
   )

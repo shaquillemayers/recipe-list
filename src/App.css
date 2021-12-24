@@ -224,7 +224,7 @@ header span{
 .modal {
   position: fixed;
   top: 5vh;
-  max-height: 90vh;
+  max-height: 80vh;
   overflow: scroll;
   left: 5%;
   width: 80%;

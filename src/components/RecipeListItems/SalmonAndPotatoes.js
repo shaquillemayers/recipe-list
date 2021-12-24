@@ -12,7 +12,7 @@ const SalmonAndPotatoes = (props) => {
     <h2> Salmon & Potatoes </h2>
     <p>Ingredients: 
       {ingredients.map(ingredient => {
-        if (ingredients.at(-1) === ingredient) {
+        if (ingredients[ingredients.length - 1] === ingredient) {
           return ` ${ingredient}.`;
         } else {
           return ` ${ingredient},`;

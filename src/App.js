@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Routes, BrowserRouter } from 'react-router-dom';
+import { Route, Routes, BrowserRouter, Navigate } from 'react-router-dom';
 import Header from './components/Layout/Header';
 import Footer from './components/Layout/Footer';
 import HomePage from './pages/HomePage';
@@ -17,6 +17,7 @@ function App() {
         <Routes>
           <Route path='/' element={<HomePage />}></Route>
           <Route path='/recipes' element={<Recipe />}></Route>
+          <Route path='*' element={<Navigate to='/' />}></Route>
         </Routes>
       </main>
       <Footer />
